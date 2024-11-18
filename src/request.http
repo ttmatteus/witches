@@ -1,0 +1,22 @@
+### Cria user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "progress": {
+    "level": 1
+  }
+}
+
+### Obeter progresso
+GET http://localhost:3000/users/progress/{token}
+
+### Atualizar progresso
+PUT http://localhost:3000/users/progress/{token}
+Content-Type: application/json
+
+{
+  "progress": {
+    "level": 2
+  }
+}
