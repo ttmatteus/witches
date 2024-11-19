@@ -1,0 +1,46 @@
+### Cria user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "progress": {
+    "level": 1
+  }
+}
+
+### Obeter progresso
+GET http://localhost:3000/users/progress/{token}
+
+### Atualizar progresso
+PUT http://localhost:3000/users/progress/{token}
+Content-Type: application/json
+
+{
+  "progress": {
+    "level": 2
+  }
+}
+
+
+### Criar um enigma
+POST http://localhost:3000/riddles
+Content-Type: application/json
+
+{
+  "phase": 1,
+  "answer": "teste"
+}
+
+### Obter o enigma da fase
+GET http://localhost:3000/riddles/1
+
+
+### Verificar a resposta
+POST http://localhost:3000/riddles/1
+Content-Type: application/json
+
+{
+  "answer": "teste"
+}
+
+
