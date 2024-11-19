@@ -20,3 +20,27 @@ Content-Type: application/json
     "level": 2
   }
 }
+
+
+### Criar um enigma
+POST http://localhost:3000/riddles
+Content-Type: application/json
+
+{
+  "phase": 1,
+  "answer": "teste"
+}
+
+### Obter o enigma da fase
+GET http://localhost:3000/riddles/1
+
+
+### Verificar a resposta
+POST http://localhost:3000/riddles/1
+Content-Type: application/json
+
+{
+  "answer": "teste"
+}
+
+
